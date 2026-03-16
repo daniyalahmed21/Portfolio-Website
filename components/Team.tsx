@@ -6,6 +6,8 @@ const features = [
     name: "SaaS Platforms",
     role: "Product",
     description: "Full-stack subscription products with Next.js, Prisma, Stripe billing, and multi-tenant auth — ready to ship from day one.",
+    imageColor: "bg-[#1e1b4b]",
+    accentColor: "from-[#4840BB]/40",
     icon: (
       <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -18,6 +20,8 @@ const features = [
     name: "AI Agents & Automation",
     role: "Intelligence",
     description: "Agentic systems built with LangChain and LangGraph — autonomous task decomposition, tool orchestration, and high-conversion sales agents.",
+    imageColor: "bg-[#0d1f2d]",
+    accentColor: "from-[#0ea5e9]/30",
     icon: (
       <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3" />
@@ -30,6 +34,8 @@ const features = [
     name: "Agentic Workflows",
     role: "Orchestration",
     description: "Multi-step reasoning pipelines with context engineering, memory systems, and self-correction loops that cut manual decision-making by 50%.",
+    imageColor: "bg-[#0f1f16]",
+    accentColor: "from-[#059669]/30",
     icon: (
       <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M5 12h14" />
@@ -44,6 +50,8 @@ const features = [
     name: "Full-Stack Architecture",
     role: "Platform",
     description: "Microservices, REST APIs, Redis queues, and Docker Compose deployments on AWS — horizontally scalable and production-hardened.",
+    imageColor: "bg-[#1f1508]",
+    accentColor: "from-[#d97706]/30",
     icon: (
       <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="8" height="5" rx="1" />
@@ -60,14 +68,16 @@ const Team: React.FC = () => {
     <section id="capabilities" className="w-full py-40 relative z-20 overflow-hidden bg-background">
       <div className="max-w-[1440px] mx-auto px-6 md:px-20 lg:px-24">
 
+        {/* Header */}
         <div className="mb-20 max-w-2xl">
-          <span className="text-white/40 text-xs font-bold uppercase tracking-widest mb-4 block">Capabilities</span>
+          <span className="text-primary text-xs font-bold uppercase tracking-widest mb-4 block">Capabilities</span>
           <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">What I Build</h2>
-          <p className="text-[#666666] text-base leading-relaxed">
+          <p className="text-text-muted text-base leading-relaxed">
             From SaaS subscriptions to autonomous AI agents — the full spectrum of modern product engineering.
           </p>
         </div>
 
+        {/* Grid of Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {features.map((feature, i) => (
             <motion.div
@@ -77,27 +87,30 @@ const Team: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -10, scale: 1.01 }}
-              className="relative h-[300px] md:h-[380px] rounded-xl overflow-hidden border border-white/5 group bg-[#080808]"
+              className={`relative h-[300px] md:h-[380px] rounded-xl overflow-hidden border border-white/5 shadow-xl group ${feature.imageColor}`}
             >
-              {/* Subtle dot-grid texture */}
-              <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_1px_1px,#fff_1px,transparent_0)] bg-[length:20px_20px]"></div>
+              {/* Gradient overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${feature.accentColor} to-black/60`}></div>
 
-              {/* Hover border */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/10 rounded-xl transition-colors duration-300"></div>
+              {/* Subtle grid texture */}
+              <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_1px_1px,#fff_1px,transparent_0)] bg-[length:20px_20px]"></div>
+
+              {/* Hover glow border */}
+              <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/15 rounded-xl transition-colors duration-300"></div>
 
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 z-10">
-                <div className="absolute top-8 left-8 bg-white/5 border border-white/8 px-3 py-1 rounded-full">
-                  <span className="text-xs font-mono text-white/40 uppercase tracking-wider">{feature.role}</span>
+                <div className="absolute top-8 left-8 bg-black/30 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full">
+                  <span className="text-xs font-mono text-white/90 uppercase tracking-wider">{feature.role}</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">{feature.name}</h3>
-                <p className="text-white/40 text-sm md:text-base leading-relaxed max-w-md group-hover:text-white/60 transition-colors duration-300">
+                <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-md group-hover:text-white transition-colors duration-300">
                   {feature.description}
                 </p>
               </div>
 
               {/* Icon top-right */}
-              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-25 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 text-white">
+              <div className="absolute top-0 right-0 p-8 opacity-15 group-hover:opacity-40 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 text-white">
                 {feature.icon}
               </div>
             </motion.div>
