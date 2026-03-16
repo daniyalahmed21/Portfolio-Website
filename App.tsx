@@ -14,6 +14,7 @@ import HeritageScroll from "./components/HeritageScroll";
 import CTA from "./components/CTA";
 import MobileApp from "./components/MobileApp";
 import FireGuide from "./components/FireGuide";
+import AgentWorkflow from "./components/AgentWorkflow";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,28 +96,35 @@ const App: React.FC = () => {
         {/* Section 4: 3D Token Ring (Translation) */}
         <TokenRing />
 
-        {/* Section 5: Heritage & Evolution (Shared 3D Scroll) */}
+        {/* Section 5: Agent Workflow Diagram */}
+        <div className="relative">
+            <AgentWorkflow />
+             {/* Separator */}
+             <div className="absolute bottom-0 w-full max-w-[1440px] left-1/2 -translate-x-1/2 border-dashed-custom-h z-20"></div>
+        </div>
+
+        {/* Section 6: Heritage & Evolution (Shared 3D Scroll) */}
         <div className="relative">
             <HeritageScroll />
              {/* Separator */}
              <div className="absolute bottom-0 w-full max-w-[1440px] left-1/2 -translate-x-1/2 border-dashed-custom-h z-20"></div>
         </div>
 
-        {/* Section 6: Team List (Coming Soon) */}
+        {/* Section 7: Capabilities */}
         <div className="relative">
             <Team />
             {/* Separator - After Coming Soon */}
             <div className="absolute bottom-0 w-full max-w-[1440px] left-1/2 -translate-x-1/2 border-dashed-custom-h z-20"></div>
         </div>
         
-        {/* Section 7: Mobile App Download */}
+        {/* Section 8: Mobile App Download */}
         <div className="relative">
              <MobileApp />
              {/* Separator - After Mobile App */}
              <div className="absolute bottom-0 w-full max-w-[1440px] left-1/2 -translate-x-1/2 border-dashed-custom-h z-20"></div>
         </div>
 
-        {/* Section 8: CTA */}
+        {/* Section 9: CTA */}
         <CTA />
         
         {/* Footer */}
@@ -124,13 +132,14 @@ const App: React.FC = () => {
              <div className="max-w-[1440px] mx-auto border-dashed-custom-h mb-12"></div>
              {/* Updated padding to md:px-20 */}
              <div className="max-w-[1440px] mx-auto px-6 md:px-20 lg:px-24 flex flex-col md:flex-row justify-between items-center text-text-muted text-sm">
-                 <div>&copy; {new Date().getFullYear()} The Bugged Dev. All rights reserved.</div>
+                 <div>&copy; {new Date().getFullYear()} Daniyal Ahmed. All rights reserved.</div>
                  <div className="flex gap-6 mt-4 md:mt-0">
                     <a href="#home" className="hover:text-white transition-colors">Home</a>
                     <a href="#work" className="hover:text-white transition-colors">Work</a>
-                    <a href="#stack" className="hover:text-white transition-colors">Stack</a>
-                    <a href="https://x.com/thebuggeddev" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">X</a>
-                    <a href="https://github.com/thebuggeddev" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
+                    <a href="#capabilities" className="hover:text-white transition-colors">Capabilities</a>
+                    <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+                    <a href="https://github.com/daniyalahmed21" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
+                    <a href="https://linkedin.com/in/daniyalahmed-dev" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
                  </div>
              </div>
         </footer>
