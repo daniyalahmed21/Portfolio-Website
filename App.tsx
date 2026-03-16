@@ -47,7 +47,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen bg-background text-white selection:bg-primary selection:text-white overflow-x-hidden font-sans">
+    <div className="relative w-full min-h-screen bg-background text-white selection:bg-white selection:text-black overflow-x-hidden font-sans">
       {/* Global 3D Fire Guide Cursor */}
       <FireGuide />
 

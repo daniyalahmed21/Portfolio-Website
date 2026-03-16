@@ -6,25 +6,25 @@ const Hero: React.FC = () => {
     <div className="flex flex-col items-start w-full max-w-xl">
       {/* Badge */}
       <div className="flex items-center space-x-0 mb-10">
-        <span className="bg-[#4840BB] text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider">
+        <span className="bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider">
           Available
         </span>
-        <span className="bg-[#1A1A24] text-gray-400 text-[10px] font-semibold px-3 py-1 uppercase tracking-widest border border-white/5">
+        <span className="bg-[#111111] text-gray-400 text-[10px] font-semibold px-3 py-1 uppercase tracking-widest border border-white/5">
           Open to Work
         </span>
       </div>
 
-      {/* Main Heading - Added ID for FireGuide target */}
+      {/* Main Heading */}
       <h1
         id="header-hero"
         className="text-5xl lg:text-7xl font-semibold leading-[1.1] tracking-tight mb-8 relative z-10"
       >
-        <span className="text-[#3b3b4f] block">Hello, I'm 👋</span>
-        <span className="text-[#dcdcf9] block">Daniyal Ahmed</span>
+        <span className="text-[#555555] block">Hello, I'm 👋</span>
+        <span className="text-white block">Daniyal Ahmed</span>
       </h1>
 
       {/* Subtext */}
-      <p className="text-[#8888AA] text-lg leading-relaxed max-w-md mb-12">
+      <p className="text-[#888888] text-lg leading-relaxed max-w-md mb-12">
         Full-Stack AI Engineer. I build production-grade SaaS platforms, design
         multi-agent AI workflows, and ship end-to-end systems that scale from
         idea to production.
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <a
           href="#work"
-          className="group relative px-8 py-4 bg-button-gradient rounded-sm text-white font-medium text-sm tracking-wide shadow-[0_0_20px_rgba(92,83,196,0.4)] overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(92,83,196,0.6)]"
+          className="group relative px-8 py-4 bg-button-gradient rounded-sm text-white font-medium text-sm tracking-wide overflow-hidden transition-all duration-300"
         >
           <div className="absolute inset-0 border border-white/20 rounded-sm group-hover:border-white/40 transition-colors"></div>
           <span className="relative z-10">View Work</span>
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         </a>
         <a
           href="mailto:daniyalahmedd25@gmail.com"
-          className="group px-8 py-4 rounded-sm text-[#8888AA] font-medium text-sm tracking-wide border border-white/10 hover:border-primary/40 hover:text-white transition-all duration-300"
+          className="group px-8 py-4 rounded-sm text-[#888888] font-medium text-sm tracking-wide border border-white/10 hover:border-white/30 hover:text-white transition-all duration-300"
         >
           Book a Call
         </a>
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
 
       {/* Logos Section */}
       <div className="mt-20 w-full">
-        <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-6 font-semibold">
+        <p className="text-[10px] text-gray-600 uppercase tracking-widest mb-6 font-semibold">
           Core Stack
         </p>
         <Logos />
