@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevFolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"],
+              serif: ["Fraunces", "serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            colors: {
+              background: "#050507",
+              primary: "#584bf6",
+              "primary-hover": "#4a3ecd",
+              "text-muted": "#6b6b80",
+              "text-light": "#e0e0ff",
+              "glow-purple": "#7c73ff",
+            },
+            backgroundImage: {
+              "button-gradient": "linear-gradient(180deg, #5c53c4 0%, #4338ca 100%)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --studio-ink: #0b0b12;
+        --studio-panel: #11131b;
+        --studio-accent: #7dd3fc;
+        --studio-warm: #fbbf24;
+        --studio-muted: #8b8bb8;
+      }
+
+      body {
+        background-color: #050507;
+        color: white;
+        overflow-x: hidden;
+      }
+      @keyframes float-soft {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(0, -14px, 0);
+        }
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @keyframes scan {
+        0% {
+          transform: translateY(-40%);
+          opacity: 0;
+        }
+        20% {
+          opacity: 0.45;
+        }
+        80% {
+          opacity: 0.45;
+        }
+        100% {
+          transform: translateY(140%);
+          opacity: 0;
+        }
+      }
+      /* Custom utility for the grid lines dashed pattern */
+      .border-dashed-custom {
+        background-image: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.4) 50%, 
+          transparent 50%
+        );
+        background-position: left top;
+        background-repeat: repeat-y;
+        background-size: 1px 12px;
+        width: 1px;
+      }
+      .border-dashed-custom-h {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.4) 50%, 
+          transparent 50%
+        );
+        background-position: left top;
+        background-repeat: repeat-x;
+        background-size: 12px 1px;
+        height: 1px;
+        width: 100%;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "three": "https://esm.sh/three@0.164.1",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.16.6?external=react,react-dom,three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.105.6?external=react,react-dom,three,@react-three/fiber",
+    "@react-three/postprocessing": "https://esm.sh/@react-three/postprocessing@2.16.2?external=react,react-dom,three,@react-three/fiber",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger",
+    "framer-motion": "https://esm.sh/framer-motion@11.1.7?external=react,react-dom",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
